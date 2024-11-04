@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src='https://kit.fontawesome.com/fc66dde611.js' crossorigin='anonymous'></script>
+    <script src='https://code.jquery.com/jquery-3.7.1.min.js'></script>
+    <title>Tarea_3_unidad_2</title>
+</head>
+<body>
+    <header class="logo">
+        <div>
+            <figure>
+                <img src='img/logo.jpg' alt='Texto descriptivo'>
+            </figure>
+        </div>
+    </header>
+    
+    <main class="secciones"> 
+        <div id="filtro_modal" class="modalpadre" aria-hidden="true" role="dialog">
+            <div  class="modal1">
+                <h1>Contact Us</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ad officia quas iusto non, aliquid quod fuga qui? Tempora rerum at et, exercitationem corporis a vero eligendi numquam expedita nobis.</p>
+
+                <form class="formulario">
+                    <div class="campo">
+                        <input type="text" id="name" name="name" placeholder="Name *">
+                    </div>
+                    <div  class="campo">
+                        <input type="text" id="name" name="name" placeholder="E-mail *">
+                    </div>
+                    <div  class="campo2">
+                        <input type="text" id="name" name="name" placeholder="Message *">
+                    </div>
+                </form>
+
+                <div id="cerrar_modal" class="tacha">
+                    <a href="#">x</a>
+                </div>
+                <div class="boton_tipo3">
+                    <a href="#">SUBMIT</a>
+                </div>
+
+            </div>
+        </div>
+        
+        <section class="seccion1">
+        <div class="div1">
+            <article>
+                <h2>Our TEAM</h2>
+                <h1>A Dedicated Team Of Experts</h1>
+                <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus dolor vero incidunt dolorem modi explicabo et vel numquam, dicta aspernatur esse? Corporis facilis </h5>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad adipisci animi recusandae et deleniti architecto laudantium ex iste! Molestias temporibus rem quidem molestiae accusantium corporis esse rerum consectetur culpa ducimus.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia inventore necessitatibus repudiandae ex reprehenderit </p>
+            </article>
+            <div class="clase_botones">
+                <a class="boton_tipo1" href="">LEARN MORE</a>
+                <a class="boton_tipo2" href="">VIEW ALL TEAM</a>
+            </div>
+        </div>
+        </section>
+        <section class="seccion2">
+            <div class="separacion">
+                <figure>
+                    <img src='img/foto1.jpg' alt='Texto descriptivo'>
+                </figure>
+                <h1>Jessica Cooper</h1>
+                <p>Esthetician</p>
+                <div>
+                    <i class='fa-brands fa-facebook'></i>
+                    <i class='fa-brands fa-x-twitter'></i>
+                    <i class='fa-brands fa-instagram'></i>
+                </div>
+                <a id="boton_abrir" class="boton_tipo1" href="">GET IN TOUCH</a>
+
+            </div>
+            <div class="separacion">
+                <figure>
+                    <img src='img/foto2.jpg' alt='Texto descriptivo'>
+                </figure>
+                <h1>Robert Wagner</h1>
+                <p>Hairdresser</p>
+                <div>
+                    <i class='fa-brands fa-facebook'></i>
+                    <i class='fa-brands fa-x-twitter'></i>
+                    <i class='fa-brands fa-instagram'></i>
+                </div>
+                <a class="boton_tipo1" href="">GET IN TOUCH</a>
+            </div>
+        </section>
+        
+    </main>
+    <br>
+    <footer>
+        <div class="footer">
+            <h2>Alumno Wilberth Zalatiel Beltran Bacab</h2>
+        </div>
+    </footer>
+
+
+    <script>
+        $(document).ready(function () {
+
+    $('#filtro_modal').addClass('mostrar').attr('aria-hidden', 'false');
+    
+    $("#boton_abrir").click(function (e) {
+        e.preventDefault(); // Evitar que el enlace recargue la página
+        $('#filtro_modal').addClass('mostrar');
+    });
+
+    $("#cerrar_modal").click(function (e) {
+        e.preventDefault();
+        $('#filtro_modal').removeClass('mostrar');
+    });
+
+    // Cerrar el modal al hacer clic fuera del contenido
+    $(window).click(function (e) {
+        if ($(e.target).is('#filtro_modal')) {
+            $('#filtro_modal').removeClass('mostrar');
+        }
+    });
+});
+
+    </script>
+</body>
+</html>
